@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Todo App</title>
+    <script
+            src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script>
+        $(document).ready(function () {
+            $('.checkbox').on('click', function () {
+                let title = $(this).find('.todo-article__title');
+                let description = $(this).find('.todo-article__description');
+                let item1 = $(this).find('input');
+
+                item1.change(function (ev) {
+                    if ($(this).prop('checked')) {
+                        title.addClass('todo-article__title_checked')
+                        description.addClass('todo-article__description_checked')
+                    } else {
+                        title.removeClass('todo-article__title_checked')
+                        description.removeClass('todo-article__description_checked')
+                    }
+                });
+            });
+
+
+        });
+    </script>
+
+</head>
+<body class="body">
+<section class="todo">
+    <div class="todo__row"><h2 class="title">Todo list</h2>
+        <div class="todo__button button">Add</div>
+    </div>
+    <div class="todo__container">
+        <div class="todo__list">
+            <article class="todo__item"><label class="checkbox label"><input type="checkbox"/><span
+                    class="checkmark"></span>
+                <div class="todo-article"><h3 class="todo-article__title">delectus aut autem</h3>
+                    <p class="todo-article__description">laboriosam mollitia et enim quasi adipisci quia provident
+                        illum</p></div>
+            </label></article>
+            <article class="todo__item"><label class="checkbox label"><input type="checkbox"/><span
+                    class="checkmark"></span>
+                <div class="todo-article"><h3 class="todo-article__title">quo laboriosam deleniti aut qui</h3>
+                    <p class="todo-article__description"></p></div>
+            </label></article>
+            <article class="todo__item"><label class="checkbox label"><input type="checkbox"/><span
+                    class="checkmark"></span>
+                <div class="todo-article"><h3 class="todo-article__title">laboriosam mollitia et enim quasi adipisci
+                    quia provident illum</h3>
+                    <p class="todo-article__description"></p></div>
+            </label></article>
+            <article class="todo__item"><label class="checkbox label"><input type="checkbox"/><span
+                    class="checkmark"></span>
+                <div class="todo-article"><h3 class="todo-article__title">repellendus sunt dolores architecto
+                    voluptatum</h3>
+                    <p class="todo-article__description">accusamus eos facilis sint et aut voluptatem</p></div>
+            </label></article>
+            <article class="todo__item"><label class="checkbox label"><input type="checkbox"/><span
+                    class="checkmark"></span>
+                <div class="todo-article"><h3 class="todo-article__title">repellendus sunt dolores architecto
+                    voluptatum</h3>
+                    <p class="todo-article__description">accusamus eos facilis sint et aut voluptatem</p></div>
+            </label></article>
+            <article class="todo__item"><label class="checkbox label"><input type="checkbox"/><span
+                    class="checkmark"></span>
+                <div class="todo-article"><h3 class="todo-article__title">repellendus sunt dolores architecto
+                    voluptatum</h3>
+                    <p class="todo-article__description">accusamus eos facilis sint et aut voluptatem</p></div>
+            </label></article>
+            <article class="todo__item"><label class="checkbox label"><input type="checkbox"/><span
+                    class="checkmark"></span>
+                <div class="todo-article"><h3 class="todo-article__title">repellendus sunt dolores architecto
+                    voluptatum</h3>
+                    <p class="todo-article__description">accusamus eos facilis sint et aut voluptatem</p></div>
+            </label></article>
+            <article class="todo__item"><label class="checkbox label"><input type="checkbox"/><span
+                    class="checkmark"></span>
+                <div class="todo-article"><h3 class="todo-article__title">repellendus sunt dolores architecto
+                    voluptatum</h3>
+                    <p class="todo-article__description">accusamus eos facilis sint et aut voluptatem</p></div>
+            </label></article>
+        </div>
+    </div>
+</section>
+<footer class="copyright">© 2022. Author Name</footer>
+</body>
+</html>
